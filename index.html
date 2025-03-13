@@ -8,7 +8,22 @@
     </head>
     <body>
         <h1 id = "sketch-title">Etch A Sketch</h1>
+        <button id="reset-button">Reset Board</button>
         <div id="sketch-container"></div>
+        <div id="popup-background">
+        </div>
+        <div id="popup-container">
+            <h2>Enter the number of squares per side</h2>
+            <input id="number-input" type="number" max="100" min="1">
+            <div id="button-container">
+                <button id="confirm-button">
+                    Confirm
+                </button>
+                <button id="return-button">
+                    Cancel
+                </button>
+            </div>
+        </div>
         <script src="./scripts/index.js"></script>
     </body>
 </html>

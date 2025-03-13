@@ -1,23 +1,27 @@
 /* change the styling adding the gridboxes to not use wrap */
 #sketch-container {
-    margin-top: 2%;
+    margin-top: 1.5%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0;
     flex-direction: row;
     justify-content: center;
-    width: 672px;
     margin-left:auto;
     margin-right: auto;
     height: 100%; 
     border: 20px ridge rgba(255, 0, 0, 0.747);
     border-radius: 5px;
+    min-width: 640px;
+    max-width: 640px;
+    min-height: 640px;
+    max-height: 640px;
+    align-items: center;
 }
 
 #sketch-title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
-    margin: 3.5% auto 0 auto;
+    margin: 2.5% auto 0 auto;
     width: 300px;
     text-align: center;
 }
@@ -28,5 +32,98 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
+#reset-button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 1.5% auto 0 auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 0.1s;
+    display: block;
+}
+
+button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+#popup-background {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+#popup-container {
+    position: absolute;
+    width: 450px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 100%;
+    z-index: 2;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2% 2% 2.5% 2%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.2s;
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 2%;
+}
+
+input {
+    margin-top: 2.8%;
+    padding: 3px;
+    margin-bottom: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+#button-container {
+    margin-top: 3.4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20%;
+}
+
+#return-button, #confirm-button {
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: white;
+    transition: 0.2s;
+}
+
+#confirm-button {
+    background-color: rgb(120, 170, 120);
+}
+
+#return-button {
+    background-color: rgb(173, 78, 78);
+}
+
+body {
+    margin: 0;
+}
